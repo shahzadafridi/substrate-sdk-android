@@ -2,8 +2,6 @@ jdk:
   - openjdk8
 
 before_install:
-  - yes | sdkmanager --install "ndk;25.1.8937393" "ndk;22.1.7171670"
-  - ./gradlew cargoBuild
   - RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
   - ENV PATH="/root/.cargo/bin:${PATH}"
   - export RUST_ANDROID_GRADLE_CARGO_COMMAND=/Users/apple/.cargo/bin/cargo
@@ -11,5 +9,9 @@ before_install:
   - rustup target add aarch64-linux-android
   - rustup target add i686-linux-android
   - rustup target add x86_64-linux-android
+  - yes | sdkmanager --install "ndk;25.1.8937393" "ndk;22.1.7171670"
+  - ./gradlew cargoBuild
+
+
 
 
