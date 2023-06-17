@@ -5,6 +5,7 @@ before_install:
   - curl https://sh.rustup.rs -sSf | bash -s -- -y
   - export PATH="$HOME/.cargo/bin/cargo"
   - export RUST_ANDROID_GRADLE_CARGO_COMMAND="$HOME/.cargo/bin/cargo"
+  - yes | sdkmanager --install "ndk;25.1.8937393" "ndk;22.1.7171670"
   - ./gradlew cargoBuild
 
 
