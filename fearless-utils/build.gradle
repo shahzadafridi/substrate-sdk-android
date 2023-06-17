@@ -6,7 +6,7 @@ apply plugin: 'org.mozilla.rust-android-gradle.rust-android'
 apply from: "$rootProject.projectDir/publish.gradle"
 
 android {
-    ndkVersion "25.1.8937393"
+    ndkVersion "23.2.8568313"
     compileSdkVersion rootProject.compileVersion
     defaultConfig {
         minSdkVersion rootProject.minVersion
